@@ -3,7 +3,7 @@ const pokeApi = {}
 function convertPokeApiDetailToPokemonClass(pokemonsDetail) {
     const pokemon = new Pokemon()
     pokemon.name = pokemonsDetail.name
-    pokemon.number = pokemonsDetail.order 
+    pokemon.number = pokemonsDetail.id 
     pokemon.types = pokemonsDetail.types.map((typeSlot) => typeSlot.type.name)
     pokemon.main_type = pokemon.types[0]
     pokemon.photo = pokemonsDetail.sprites.other.dream_world.front_default
